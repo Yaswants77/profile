@@ -32,7 +32,7 @@ const Navigation = () => {
           <div className="flex-shrink-0">
             <button
               onClick={() => scrollToSection('home')}
-              className="text-xl font-bold text-white hover:text-blue-400 transition-colors font-mono"
+              className="text-lg sm:text-xl font-bold text-white hover:text-blue-400 transition-colors font-mono"
             >
               &lt;Yaswant Kumar /&gt;
             </button>
@@ -40,12 +40,12 @@ const Navigation = () => {
           
           {/* Desktop Menu */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="ml-6 lg:ml-10 flex items-baseline space-x-4 lg:space-x-8">
               {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className="text-gray-300 hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors duration-200 relative group"
+                  className="text-gray-300 hover:text-blue-400 px-2 lg:px-3 py-2 text-sm lg:text-base font-medium transition-colors duration-200 relative group"
                 >
                   {item}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-200 group-hover:w-full"></span>
