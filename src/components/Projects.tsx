@@ -30,7 +30,11 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="py-20 bg-gradient-to-b from-white via-slate-50/50 to-gray-50 relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-20 right-20 w-40 h-40 bg-gradient-to-bl from-sky-300/10 to-cyan-300/10 rounded-full blur-2xl"></div>
+      <div className="absolute bottom-20 left-20 w-56 h-56 bg-gradient-to-tr from-indigo-300/10 to-blue-300/10 rounded-full blur-2xl"></div>
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">

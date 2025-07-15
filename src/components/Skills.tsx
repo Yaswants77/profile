@@ -29,7 +29,11 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-gray-50">
+    <section id="skills" className="py-20 bg-gradient-to-br from-slate-50 via-sky-50/50 to-indigo-50/30 relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute top-10 left-10 w-64 h-64 bg-gradient-to-r from-sky-200/20 to-cyan-200/20 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-10 right-10 w-72 h-72 bg-gradient-to-r from-indigo-200/20 to-purple-200/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '3s' }}></div>
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
