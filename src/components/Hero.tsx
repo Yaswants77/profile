@@ -1,74 +1,107 @@
 import React from 'react';
-import { MapPin, Code, Zap } from 'lucide-react';
+import { MapPin, Code, BookOpen, Coffee } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background Animation */}
-      <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 via-sky-50 to-cyan-50">
-        {/* Animated gradient orbs */}
-        <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-sky-400/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-cyan-400/20 to-sky-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-indigo-400/10 to-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+      {/* Personal touch background elements */}
+      <div className="absolute inset-0">
+        {/* Subtle code-like pattern */}
+        <div className="absolute top-20 left-10 text-blue-200/30 font-mono text-sm transform rotate-12">
+          {'{ coding: "passion" }'}
+        </div>
+        <div className="absolute bottom-32 right-16 text-indigo-200/30 font-mono text-sm transform -rotate-12">
+          console.log("Hello World!");
+        </div>
+        <div className="absolute top-1/3 right-1/4 text-sky-200/30 font-mono text-xs transform rotate-6">
+          while(learning) {'{ grow(); }'}
+        </div>
         
-        {/* Geometric patterns */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fill-rule=%22evenodd%22%3E%3Cg fill=%22%230ea5e9%22 fill-opacity=%220.05%22%3E%3Ccircle cx=%2230%22 cy=%2230%22 r=%222%22/%3E%3C/g%3E%3C/svg%3E')] opacity-40"></div>
-        
-        {/* Floating elements */}
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-sky-400 rounded-full animate-bounce" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-3/4 right-1/4 w-3 h-3 bg-cyan-400 rounded-full animate-bounce" style={{ animationDelay: '3s' }}></div>
-        <div className="absolute top-1/2 right-1/3 w-1 h-1 bg-indigo-400 rounded-full animate-bounce" style={{ animationDelay: '5s' }}></div>
+        {/* Floating elements representing interests */}
+        <div className="absolute top-1/4 left-1/3 w-3 h-3 bg-blue-400/40 rounded-full animate-bounce" style={{ animationDelay: '0s' }}></div>
+        <div className="absolute top-2/3 left-1/5 w-2 h-2 bg-indigo-400/40 rounded-full animate-bounce" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 right-1/3 w-4 h-4 bg-sky-400/40 rounded-full animate-bounce" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-        <div className="space-y-8 animate-fade-in">
-          <div className="space-y-4">
+      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+        <div className="space-y-8">
+          {/* Personal greeting */}
+          <div className="space-y-6">
+            <div className="inline-block">
+              <span className="text-lg text-gray-600 font-medium">👋 Hello there! I'm</span>
+            </div>
+            
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              Hi, I'm{' '}
-              <span className="text-sky-600 bg-gradient-to-r from-sky-600 to-sky-700 bg-clip-text text-transparent">
-                Yaswant Kumar
-              </span>
+              <span className="text-blue-600">Yaswant</span> Kumar
             </h1>
-            <p className="text-xl sm:text-2xl text-gray-600 font-medium">
-              Final Year B.Tech Student | Aspiring Software Developer
+            
+            <div className="space-y-3">
+              <p className="text-xl sm:text-2xl text-gray-700 font-medium">
+                Final Year B.Tech Student
+              </p>
+              <p className="text-lg sm:text-xl text-gray-600">
+                Aspiring Software Developer from Jaipur 🏛️
+              </p>
+            </div>
+          </div>
+
+          {/* Personal location and status */}
+          <div className="flex flex-wrap items-center justify-center gap-6 text-gray-600">
+            <div className="flex items-center gap-2 bg-white/70 backdrop-blur-sm rounded-full px-4 py-2 shadow-sm">
+              <MapPin size={18} className="text-blue-500" />
+              <span>Jaipur, India</span>
+            </div>
+            <div className="flex items-center gap-2 bg-white/70 backdrop-blur-sm rounded-full px-4 py-2 shadow-sm">
+              <BookOpen size={18} className="text-green-500" />
+              <span>Currently Learning</span>
+            </div>
+            <div className="flex items-center gap-2 bg-white/70 backdrop-blur-sm rounded-full px-4 py-2 shadow-sm">
+              <Coffee size={18} className="text-amber-500" />
+              <span>Fueled by Coffee</span>
+            </div>
+          </div>
+
+          {/* Personal tagline */}
+          <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-lg max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-700 italic leading-relaxed">
+              "Exploring code, building ideas, and learning every day."
+            </p>
+            <p className="text-sm text-gray-500 mt-2">
+              — My journey in tech
             </p>
           </div>
 
-          <div className="flex items-center justify-center gap-2 text-gray-500">
-            <MapPin size={20} />
-            <span className="text-lg">Jaipur, India</span>
-          </div>
-
-          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            "Exploring code, building ideas, and learning every day."
-          </p>
-
-          <div className="flex flex-wrap justify-center gap-6 pt-6">
-            <div className="flex items-center gap-2 bg-white/70 backdrop-blur-sm rounded-full px-4 py-2 shadow-sm">
-              <Code className="text-sky-600" size={20} />
-              <span className="text-gray-700 font-medium">Problem Solver</span>
+          {/* Personal interests/traits */}
+          <div className="flex flex-wrap justify-center gap-4 pt-4">
+            <div className="flex items-center gap-2 bg-blue-100 text-blue-700 rounded-full px-4 py-2">
+              <Code size={18} />
+              <span className="font-medium">Problem Solver</span>
             </div>
-            <div className="flex items-center gap-2 bg-white/70 backdrop-blur-sm rounded-full px-4 py-2 shadow-sm">
-              <Zap className="text-sky-600" size={20} />
-              <span className="text-gray-700 font-medium">Fast Learner</span>
+            <div className="flex items-center gap-2 bg-green-100 text-green-700 rounded-full px-4 py-2">
+              <BookOpen size={18} />
+              <span className="font-medium">Continuous Learner</span>
             </div>
           </div>
 
-          <div className="pt-8">
+          {/* Call to action */}
+          <div className="pt-8 space-y-4">
             <button
               onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-sky-600 hover:bg-sky-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              className="inline-flex items-center px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
-              Get to Know Me
+              Let's Connect!
             </button>
+            <p className="text-sm text-gray-500">
+              Scroll down to know more about my journey
+            </p>
           </div>
         </div>
       </div>
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-sky-600 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-sky-600 rounded-full mt-2 animate-pulse"></div>
+        <div className="w-6 h-10 border-2 border-blue-400 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-blue-400 rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>

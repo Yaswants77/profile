@@ -1,75 +1,134 @@
 import React from 'react';
-import { GraduationCap, Heart, Target } from 'lucide-react';
+import { GraduationCap, Heart, MapPin, Calendar, Target, Lightbulb } from 'lucide-react';
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-white via-gray-50 to-sky-50/30 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-sky-100/50 to-transparent rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-cyan-100/50 to-transparent rounded-full blur-3xl"></div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-20 bg-gradient-to-b from-white via-slate-50 to-blue-50/30">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            About Me
+            A Little About Me
           </h2>
-          <div className="w-24 h-1 bg-sky-600 mx-auto"></div>
+          <div className="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Here's my story - from curiosity to passion, and everything in between
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          {/* Personal Story */}
           <div className="space-y-6">
-            <div className="bg-gradient-to-br from-sky-50 to-white p-8 rounded-2xl shadow-lg">
+            <div className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500">
               <div className="flex items-center gap-3 mb-4">
-                <GraduationCap className="text-sky-600" size={24} />
-                <h3 className="text-xl font-semibold text-gray-900">Education</h3>
+                <div className="bg-blue-100 p-2 rounded-lg">
+                  <Heart className="text-blue-600" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900">My Journey</h3>
               </div>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Hi! I'm Yaswant, a final-year B.Tech student who fell in love with coding 
+                during my first programming class. What started as curiosity has grown into 
+                a genuine passion for creating solutions through code.
+              </p>
               <p className="text-gray-600 leading-relaxed">
-                I'm currently pursuing my B.Tech degree at{' '}
-                <span className="font-semibold text-sky-600">Vivekananda Global University, Jaipur</span>,
-                where I'm in my final year. My journey in technology started with curiosity 
-                and has grown into a passionate pursuit of software development.
+                Every day, I wake up excited to learn something new, solve challenging problems, 
+                and build projects that matter. I believe in the power of technology to make 
+                life better, and I want to be part of that change.
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-sky-50 to-white p-8 rounded-2xl shadow-lg">
+            <div className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-green-500">
               <div className="flex items-center gap-3 mb-4">
-                <Heart className="text-sky-600" size={24} />
-                <h3 className="text-xl font-semibold text-gray-900">Passion</h3>
+                <div className="bg-green-100 p-2 rounded-lg">
+                  <Lightbulb className="text-green-600" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900">What Drives Me</h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                I'm deeply passionate about software development, problem-solving, and 
-                learning new technologies. Every day brings new challenges that I embrace 
-                with enthusiasm and determination.
+                I'm driven by the "aha!" moments when a complex problem finally clicks, 
+                the satisfaction of writing clean code, and the excitement of seeing an 
+                idea come to life. I love collaborating with others and believe that 
+                the best solutions come from diverse perspectives.
               </p>
             </div>
           </div>
 
+          {/* Personal Details */}
           <div className="space-y-6">
-            <div className="bg-gradient-to-br from-sky-50 to-white p-8 rounded-2xl shadow-lg">
-              <div className="flex items-center gap-3 mb-4">
-                <Target className="text-sky-600" size={24} />
-                <h3 className="text-xl font-semibold text-gray-900">Learning Journey</h3>
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="bg-blue-100 p-2 rounded-lg">
+                  <GraduationCap className="text-blue-600" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900">Education & Background</h3>
               </div>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                I'm actively expanding my technical skills across multiple programming 
-                languages and technologies. My current focus includes:
-              </p>
-              <div className="grid grid-cols-2 gap-3">
-                {['C', 'C++', 'Java', 'HTML', 'CSS', 'JavaScript'].map((tech) => (
-                  <div key={tech} className="bg-white/70 backdrop-blur-sm rounded-lg px-3 py-2 text-center">
-                    <span className="text-sm font-medium text-gray-700">{tech}</span>
+              
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <Calendar className="text-blue-500 mt-1" size={18} />
+                  <div>
+                    <h4 className="font-medium text-gray-900">Currently Pursuing</h4>
+                    <p className="text-gray-600">B.Tech - Final Year</p>
+                    <p className="text-sm text-gray-500">Vivekananda Global University, Jaipur</p>
                   </div>
-                ))}
+                </div>
+                
+                <div className="flex items-start gap-3">
+                  <MapPin className="text-green-500 mt-1" size={18} />
+                  <div>
+                    <h4 className="font-medium text-gray-900">Based in</h4>
+                    <p className="text-gray-600">Jaipur, Rajasthan, India</p>
+                    <p className="text-sm text-gray-500">The Pink City 🏛️</p>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-sky-50 to-white p-8 rounded-2xl shadow-lg">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Looking Forward</h3>
-              <p className="text-gray-600 leading-relaxed">
-                I'm excited to contribute to innovative projects and continue growing 
-                as a developer. My goal is to build solutions that make a difference 
-                while constantly learning and adapting to new technologies.
-              </p>
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="bg-purple-100 p-2 rounded-lg">
+                  <Target className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900">Currently Learning</h3>
+              </div>
+              
+              <div className="grid grid-cols-2 gap-3">
+                {['C Programming', 'C++', 'Java', 'HTML & CSS', 'JavaScript', 'Data Structures'].map((skill) => (
+                  <div key={skill} className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-3 text-center">
+                    <span className="text-sm font-medium text-gray-700">{skill}</span>
+                  </div>
+                ))}
+              </div>
+              
+              <div className="mt-6 p-4 bg-yellow-50 rounded-lg border-l-4 border-yellow-400">
+                <p className="text-sm text-gray-600 italic">
+                  "I'm always eager to learn new technologies and expand my skill set. 
+                  Currently exploring web development and looking forward to diving deeper 
+                  into full-stack development!"
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Fun Facts */}
+        <div className="mt-16 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8">
+          <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">Fun Facts About Me</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="text-center">
+              <div className="text-3xl mb-2">☕</div>
+              <h4 className="font-semibold text-gray-900">Coffee Lover</h4>
+              <p className="text-sm text-gray-600">My code runs on coffee and curiosity</p>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl mb-2">🌙</div>
+              <h4 className="font-semibold text-gray-900">Night Owl</h4>
+              <p className="text-sm text-gray-600">Best coding happens after midnight</p>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl mb-2">🎯</div>
+              <h4 className="font-semibold text-gray-900">Goal-Oriented</h4>
+              <p className="text-sm text-gray-600">Always working towards the next milestone</p>
             </div>
           </div>
         </div>
